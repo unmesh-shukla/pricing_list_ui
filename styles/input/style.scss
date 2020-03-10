@@ -1,0 +1,333 @@
+@import "fonts.scss";
+@import "loader.scss";
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 330px;
+  background-image: linear-gradient(90deg, rgb(40, 63, 84), rgb(58, 92, 100));
+  min-width: 394px;
+}
+.icon-header {
+  position: absolute;
+  font-size: 60px;
+  color: transparent;
+  opacity: 0.05;
+  -webkit-text-stroke: 3px lightgray;
+  -moz-text-stroke: 3px lightgray;
+  text-stroke: 3px lightgray;
+}
+#main-heading {
+  position: relative;
+  top: 30px;
+  text-align: center;
+  font-family: map-get($fonts, 'heading');
+  color: #ffffff;
+  font-size: 34px;
+}
+#sub-heading {
+  position: relative;
+  top: 60px;
+  text-align: center;
+  font-family: map-get($fonts, 'sub-heading');
+  color: #ffffff;
+  font-weight: 100;
+}
+#sub-text {
+  position: relative;
+  top: 60px;
+  text-align: center;
+  font-family: map-get($fonts, 'sub-heading');
+  color: #ffffff;
+  font-weight: bolder;
+}
+#plan-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 330px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #eeeeee;
+  box-shadow: 0 0 80px 0 rgba(0, 0, 0, 0.4);
+  font-family: map-get($fonts, 'plan-font-1');
+  min-width: 394px;
+}
+.plan-card {
+  position: relative;
+  margin: 10px;
+  top: -60px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  width: 0.27 * 100%;
+  min-width: 100px;
+  @media (max-width: 1000px) {
+    .plan-billing-cycle {
+      margin-top: 30px;
+      font-size: 20px;
+      height: 10px;
+    }
+  }
+}
+.plan-card-item-common {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  @media (max-width: 1000px) {
+    .plan-price-per-month {
+      font-size: 20px;
+      height: 10px;
+    }
+    .plan-per-month {
+      padding-top: 20px;
+      height: 10px;
+      margin-bottom: 0;  
+    }
+  }
+}
+.plan-name {
+  height: 86px;
+  background-color: rgb(35, 54, 80);
+  border-bottom: 4px solid rgb(27, 167, 213);
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 30px;
+}
+.plan-name-pro {
+  background-color: rgb(23, 40, 63);
+  border-bottom: 4px solid rgb(242, 101, 34);
+}
+.plan-price-per-month {
+  padding-top: 20px;
+  font-family: map-get($fonts, 'plan-font-2');
+  font-size: 70px;
+  font-weight: bolder;
+  color: #555555;
+  height: 110px;
+}
+.plan-per-month {
+  margin-bottom: -30px;
+  font-size: 20px;
+  font-weight: normal;
+  color: #555555;
+  justify-content: flex-end;
+}
+.plan-billing-cycle {
+  margin-top: -15px;
+  font-size: 20px;
+  font-weight: normal;
+  color: #aaaaaa;
+}
+.plan-reg-users {
+  margin-top: 10px;
+  font-family: map-get($fonts, 'plan-font-2');
+  font-size: 22px;
+  font-weight: bold;
+  color: #000000;
+}
+.plan-extra-charge {
+  font-size: 20px;
+  font-weight: bolder;
+  color: #aaaaaa;
+  padding-bottom: 10px;
+}
+.plan-feature-common {
+  font-size: 20px;
+  color: gray;
+  border-bottom: 1px #eeeeee solid;
+  font-weight: bolder;
+  height: 70px;
+}
+.plan-feature-common:hover {
+  color: rgb(242, 101, 34);
+}
+.plan-features {
+  color: #000000;
+}
+.plan-compare-button {
+  height: 120px;
+}
+.plan-compare-button a {
+  text-decoration: none;
+  color: rgb(59, 210, 237);
+  font-size: 18px;
+  font-weight: bolder;
+}
+#compare-container {
+  position: absolute;
+  justify-content: center;
+  top: 1073px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.4);
+  font-family: map-get($fonts, 'plan-font-1');
+  min-width: 394px;
+}
+#main-heading-comparison {
+  position: relative;
+  top: 30px;
+  text-align: center;
+  font-family: map-get($fonts, 'heading');
+  color: rgb(7, 165, 212);
+  font-size: 34px;
+}
+table {
+  border-collapse: collapse;
+}
+#table-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 60px;
+  overflow: hidden;
+}
+tr:nth-child(1) {
+  box-shadow: 0 7px 6px -5px #aaaaaa;
+}
+tr:nth-child(2) {
+  height: 5px;
+}
+tr:last-child {
+  td:nth-child(5), td:nth-child(7), td:nth-child(9) {
+    border-radius: 0 0 5px 5px;
+  }
+}
+th {
+  height: 68px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #777777;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px 5px 0 0;
+  &:nth-child(1) {
+    width: 360px;
+  }
+  &:nth-child(5), &:nth-child(7), &:nth-child(9) {
+    width: 210px;
+  }
+  &:nth-child(even) {
+    width: 0px;
+  }
+}
+td {
+  height: 68px;
+  font-weight: bold;
+  color: #555555;
+  padding-left: 5px;
+  padding-right: 5px;
+  &:nth-child(5), &:nth-child(7), &:nth-child(9) {
+    width: 210px;
+  }
+  &:nth-child(even) {
+    width: 0;
+  }
+  &:nth-child(n + 2) {
+    text-align: center;
+    color: #aaaaaa;
+    font-size: 20px;
+  }
+}
+tr:last-child {
+  td {
+    height: 20px;
+  }
+}
+tr:nth-child(n + 6):nth-child(-n + 18) td:nth-child(n + 2), tr:nth-child(n + 20) td:nth-child(n + 2) {
+  color: #009922;
+}
+tr:nth-child(n + 4):nth-child(-n + 7), tr:nth-child(n + 10):nth-child(-n + 22) {
+  border-bottom: 2px solid #dddddd;
+  &:hover {
+    border-bottom: 2px solid rgb(7, 165, 212);
+    td:nth-child(1) {
+      color: #000000;
+    }  
+  }
+}
+tr:nth-child(n + 3) td:nth-child(5), tr:nth-child(n + 3) td:nth-child(9), th:nth-child(5), th:nth-child(9) {
+  background-color: rgb(245, 245, 245);
+}
+tr:nth-child(n + 3) td:nth-child(7), th:nth-child(7) {
+  background-color: rgb(238, 238, 238);
+}
+.feature-category {
+  color: rgb(7, 165, 212);
+  font-weight: bold;
+  font-size: 20px;
+}
+.feature-name {
+  color: #aaaaaa;
+  font-weight: bold;
+  font-size: 20px;
+}
+.feature-hint {
+  font-size: 30px;
+  color: #aaaaaa;
+  cursor: pointer;
+  &:hover {
+    color: rgb(59, 210, 237);
+  }
+  span {
+    position: absolute;
+    width: auto;
+    max-width: 215px;
+    transform: translate(20px, -50%);
+    background-color: black;
+    font-size: 14px;
+    font-family: map-get($fonts, 'plan-font-1');
+    color: #ffffff;
+    padding: 15px;
+    opacity: 0;
+    border-radius: 5px;
+    z-index: 20;
+    text-align: justify;
+    line-height: 20px;
+    visibility: hidden;
+  }
+  &:hover span {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+#footer-container {
+  position: relative;
+  justify-content: center;
+  bottom: 0;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 220px;
+  background-color: rgb(35, 54, 80);
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.4);
+  font-family: map-get($fonts, 'plan-font-1');
+  padding-bottom: 150px;
+}
+#main-heading-footer {
+  position: relative;
+  top: 63px;
+  text-align: center;
+  font-family: map-get($fonts, 'heading');
+  color: rgb(7, 165, 212);
+  font-size: 34px;
+}
+#contacts {
+  position: relative;
+  top: 80px;
+  font-family: map-get($fonts, 'plan-font-2');
+  color: #ffffff;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,376 @@
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Raleway"), local("Raleway-Regular"), url(https://fonts.gstatic.com/s/raleway/v14/1Ptug8zYS_SKggPNyC0IT4ttDfA.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+/* latin */
+@font-face {
+  font-family: 'Arvo';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Arvo"), url(https://fonts.gstatic.com/s/arvo/v13/tDbD2oWUg0MKqScQ7Z7o_vo.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+/* latin */
+@font-face {
+  font-family: 'Hind';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Hind Regular"), local("Hind-Regular"), url(https://fonts.gstatic.com/s/hind/v10/5aU69_a8oxmIdGl4BDGwgDI.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+/* latin */
+@font-face {
+  font-family: 'IBM Plex Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("IBM Plex Sans"), local("IBMPlexSans"), url(https://fonts.gstatic.com/s/ibmplexsans/v7/zYXgKVElMYYaJe8bpLHnCwDKhdHeFaxOedc.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+#overlay-loader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #eeeeee;
+  z-index: 1; }
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  box-shadow: 0px 0px 3px 0px;
+  border: 40px ridge transparent;
+  border-top: 40px ridge #447;
+  animation: myanim 1s ease-in-out infinite; }
+
+@keyframes myanim {
+  25% {
+    border: 40px ridge transparent;
+    border-right: 40px solid #447; }
+  50% {
+    border: 40px ridge transparent;
+    border-bottom: 40px solid #447; }
+  75% {
+    border: 40px ridge transparent;
+    border-left: 40px solid #447; } }
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 330px;
+  background-image: linear-gradient(90deg, #283f54, #3a5c64);
+  min-width: 394px; }
+
+.icon-header {
+  position: absolute;
+  font-size: 60px;
+  color: transparent;
+  opacity: 0.05;
+  -webkit-text-stroke: 3px lightgray;
+  -moz-text-stroke: 3px lightgray;
+  text-stroke: 3px lightgray; }
+
+#main-heading {
+  position: relative;
+  top: 30px;
+  text-align: center;
+  font-family: "Arvo";
+  color: #ffffff;
+  font-size: 34px; }
+
+#sub-heading {
+  position: relative;
+  top: 60px;
+  text-align: center;
+  font-family: "Raleway";
+  color: #ffffff;
+  font-weight: 100; }
+
+#sub-text {
+  position: relative;
+  top: 60px;
+  text-align: center;
+  font-family: "Raleway";
+  color: #ffffff;
+  font-weight: bolder; }
+
+#plan-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 330px;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  background-color: #eeeeee;
+  box-shadow: 0 0 80px 0 rgba(0, 0, 0, 0.4);
+  font-family: "Hind";
+  min-width: 394px; }
+
+.plan-card {
+  position: relative;
+  margin: 10px;
+  top: -60px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  width: 27%;
+  min-width: 100px; }
+  @media (max-width: 1000px) {
+    .plan-card .plan-billing-cycle {
+      margin-top: 30px;
+      font-size: 20px;
+      height: 10px; } }
+
+.plan-card-item-common {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%; }
+  @media (max-width: 1000px) {
+    .plan-card-item-common .plan-price-per-month {
+      font-size: 20px;
+      height: 10px; }
+    .plan-card-item-common .plan-per-month {
+      padding-top: 20px;
+      height: 10px;
+      margin-bottom: 0; } }
+
+.plan-name {
+  height: 86px;
+  background-color: #233650;
+  border-bottom: 4px solid #1ba7d5;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 30px; }
+
+.plan-name-pro {
+  background-color: #17283f;
+  border-bottom: 4px solid #f26522; }
+
+.plan-price-per-month {
+  padding-top: 20px;
+  font-family: "IBM Plex Sans";
+  font-size: 70px;
+  font-weight: bolder;
+  color: #555555;
+  height: 110px; }
+
+.plan-per-month {
+  margin-bottom: -30px;
+  font-size: 20px;
+  font-weight: normal;
+  color: #555555;
+  justify-content: flex-end; }
+
+.plan-billing-cycle {
+  margin-top: -15px;
+  font-size: 20px;
+  font-weight: normal;
+  color: #aaaaaa; }
+
+.plan-reg-users {
+  margin-top: 10px;
+  font-family: "IBM Plex Sans";
+  font-size: 22px;
+  font-weight: bold;
+  color: #000000; }
+
+.plan-extra-charge {
+  font-size: 20px;
+  font-weight: bolder;
+  color: #aaaaaa;
+  padding-bottom: 10px; }
+
+.plan-feature-common {
+  font-size: 20px;
+  color: gray;
+  border-bottom: 1px #eeeeee solid;
+  font-weight: bolder;
+  height: 70px; }
+
+.plan-feature-common:hover {
+  color: #f26522; }
+
+.plan-features {
+  color: #000000; }
+
+.plan-compare-button {
+  height: 120px; }
+
+.plan-compare-button a {
+  text-decoration: none;
+  color: #3bd2ed;
+  font-size: 18px;
+  font-weight: bolder; }
+
+#compare-container {
+  position: absolute;
+  justify-content: center;
+  top: 1073px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.4);
+  font-family: "Hind";
+  min-width: 394px; }
+
+#main-heading-comparison {
+  position: relative;
+  top: 30px;
+  text-align: center;
+  font-family: "Arvo";
+  color: #07a5d4;
+  font-size: 34px; }
+
+table {
+  border-collapse: collapse; }
+
+#table-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  top: 60px;
+  overflow: hidden; }
+
+tr:nth-child(1) {
+  box-shadow: 0 7px 6px -5px #aaaaaa; }
+
+tr:nth-child(2) {
+  height: 5px; }
+
+tr:last-child td:nth-child(5), tr:last-child td:nth-child(7), tr:last-child td:nth-child(9) {
+  border-radius: 0 0 5px 5px; }
+
+th {
+  height: 68px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #777777;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px 5px 0 0; }
+  th:nth-child(1) {
+    width: 360px; }
+  th:nth-child(5), th:nth-child(7), th:nth-child(9) {
+    width: 210px; }
+  th:nth-child(even) {
+    width: 0px; }
+
+td {
+  height: 68px;
+  font-weight: bold;
+  color: #555555;
+  padding-left: 5px;
+  padding-right: 5px; }
+  td:nth-child(5), td:nth-child(7), td:nth-child(9) {
+    width: 210px; }
+  td:nth-child(even) {
+    width: 0; }
+  td:nth-child(n + 2) {
+    text-align: center;
+    color: #aaaaaa;
+    font-size: 20px; }
+
+tr:last-child td {
+  height: 20px; }
+
+tr:nth-child(n + 6):nth-child(-n + 18) td:nth-child(n + 2), tr:nth-child(n + 20) td:nth-child(n + 2) {
+  color: #009922; }
+
+tr:nth-child(n + 4):nth-child(-n + 7), tr:nth-child(n + 10):nth-child(-n + 22) {
+  border-bottom: 2px solid #dddddd; }
+  tr:nth-child(n + 4):nth-child(-n + 7):hover, tr:nth-child(n + 10):nth-child(-n + 22):hover {
+    border-bottom: 2px solid #07a5d4; }
+    tr:nth-child(n + 4):nth-child(-n + 7):hover td:nth-child(1), tr:nth-child(n + 10):nth-child(-n + 22):hover td:nth-child(1) {
+      color: #000000; }
+
+tr:nth-child(n + 3) td:nth-child(5), tr:nth-child(n + 3) td:nth-child(9), th:nth-child(5), th:nth-child(9) {
+  background-color: whitesmoke; }
+
+tr:nth-child(n + 3) td:nth-child(7), th:nth-child(7) {
+  background-color: #eeeeee; }
+
+.feature-category {
+  color: #07a5d4;
+  font-weight: bold;
+  font-size: 20px; }
+
+.feature-name {
+  color: #aaaaaa;
+  font-weight: bold;
+  font-size: 20px; }
+
+.feature-hint {
+  font-size: 30px;
+  color: #aaaaaa;
+  cursor: pointer; }
+  .feature-hint:hover {
+    color: #3bd2ed; }
+  .feature-hint span {
+    position: absolute;
+    width: auto;
+    max-width: 215px;
+    transform: translate(20px, -50%);
+    background-color: black;
+    font-size: 14px;
+    font-family: "Hind";
+    color: #ffffff;
+    padding: 15px;
+    opacity: 0;
+    border-radius: 5px;
+    z-index: 20;
+    text-align: justify;
+    line-height: 20px;
+    visibility: hidden; }
+  .feature-hint:hover span {
+    visibility: visible;
+    opacity: 1; }
+
+#footer-container {
+  position: relative;
+  justify-content: center;
+  bottom: 0;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 220px;
+  background-color: #233650;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.4);
+  font-family: "Hind";
+  padding-bottom: 150px; }
+
+#main-heading-footer {
+  position: relative;
+  top: 63px;
+  text-align: center;
+  font-family: "Arvo";
+  color: #07a5d4;
+  font-size: 34px; }
+
+#contacts {
+  position: relative;
+  top: 80px;
+  font-family: "IBM Plex Sans";
+  color: #ffffff;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; }
